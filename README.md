@@ -1,16 +1,10 @@
 # Capstone Project Udacity Machine Learning Engineer Nanodegree
+This project I have the opportunity to use the knowledge obtained from this Nanodegree to solve an interesting problem. In this project, I will create two models: one using Automated ML (denoted as AutoML from now on) and one customized model whose hyperparameters are tuned using HyperDrive. I will then compare the performance of both the models and deploy the best performing model.
 
-This repository hosts files for the Capstone Project of Udacity's Machine Learning Nanodegree with Microsoft Azure.
-
-In this project I created two experiments; one using Microsoft Azure Machine Learning [Hyperdrive package](https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.hyperdrive?view=azure-ml-py), and another using Microsoft Azure [Automated Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-auto-train?view=azure-ml-py) feature (referred to as AutoML going forward) with the [Azure Python SDK](https://docs.microsoft.com/en-us/python/api/overview/azure/ml/?view=azure-ml-py).
-
-The best models from the two experiments were compared based on the primary metric (AUC weighted score) and the best performing model was deployed and consumed using a web service.
-
-## Project Workflow
-![](https://github.com/ObinnaIheanachor/Capstone-Project-Udacity-Machine-Learning-Engineer/blob/master/images/capstone-diagram.png)
+In this  will demonstrate my ability to use an external dataset in your workspace, train a model using the different tools available in the AzureML framework as well as your ability to deploy the model as a web service.
 
 ## Dataset
-------commnet for mentor sorry this is from another program
+
 This is the classic marketing bank dataset uploaded originally in the UCI Machine Learning Repository. The dataset gives you information about a marketing campaign of a financial institution in which you will have to analyze in order to find ways to look for future strategies in order to improve future marketing campaigns for the bank.
 https://www.kaggle.com/datasets/janiobachmann/bank-marketing-dataset
 
@@ -18,31 +12,14 @@ https://www.kaggle.com/datasets/janiobachmann/bank-marketing-dataset
 This is a binary classification problem, where the outcome 'Y' will either be 'yes' or 'no'. In this experiment, we will use `Hyperdrive` and `AutoML' to train models on the dataset based on the `AUC Weighted` metric. We will then deploy the model with the best performance and interact with the deployed model.
 
 ### Access
-The data is hosted [here](https://github.com/ObinnaIheanachor/Capstone-Project-Udacity-Machine-Learning-Engineer/blob/master/data/attrition-dataset.csv) in this repository. 
+The data is hosted in this repository.https://github.com/Kuralay92/CapstoneUdacity/blob/607123a40a3d05d1c2043edf5fb9bcb18dd46f86/bankmarketing_train%20(2).csv 
 I will use the `Tabular Dataset Factory's Dataset.Tabular.from_delimited_files()` operation to get the data from the url and save it to the datastore by using dataset.register().
 
 ## Automated ML
-Automated machine learning picks an algorithm and hyperparameters for you and generates a model ready for deployment. There are several options that you can use to configure automated machine learning experiments.
-This is a binary classification problem with label column 'Attrition' having output as 'true' or 'false'. 25 mins is the experiment_timeout_duration, a maximum of 5 concurrent iterations take place together, and the primary metric is AUC_weighted.
+AutoML or Automated ML is the process of automating the task of machine learning model development. Using this feature, you can predict the best ML model, and its hyperparameters suited for your problem statement.
 
-The AutoML configurations used for this experiment are:
-
-| Auto ML Configuration | Value | Explanation |
-|    :---:     |     :---:      |     :---:     |
-| experiment_timeout_minutes | 25 | Maximum duration in minutes that all iterations can take before the experiment is terminated |
-| max_concurrent_iterations | 5 | Represents the maximum number of iterations that would be executed in parallel |
-| primary_metric | AUC_weighted | This is the metric that the AutoML runs will optimize for when selecting the best performing model |
-| compute_target | cpu_cluster(created) | The compute target on which we will run the experiment |
-| task | classification | This is the nature of our machine learning task |
-| training_data | dataset(imported) | The training data to be used within the experiment |
-| label_column_name | Attrition | The name of the label column |
-| path | ./capstone | This is the path to the project folder |
-| enable_early_stopping | True | Enable early termination if the score is not improving |
-| featurization | auto | Indicates if featurization step should be done automatically or not, or whether customized featurization should be used |
-| debug_log | automl_errors.log | The log file to write debug information to |
-
-![](https://github.com/ObinnaIheanachor/Capstone-Project-Udacity-Machine-Learning-Engineer/blob/master/images/auto%20ml%20config.PNG)
-
+For this experiment in Azure ML Studio we train a model using the on the bank marketing dataset with Automated ML, we create a new compute cluster, and run the AutoML experiment.
+![]https://github.com/Kuralay92/CapstoneUdacity/blob/4bbe8b552bbb7981fa9c26da6cf0eb47c5521b1d/screenshot/Screenshot%202022-05-22%20214450.png
 
 ### Results
 The best performing model is the `VotingEnsemble` with an AUC_weighted value of **0.89**. A voting ensemble (or a “majority voting ensemble“) is an ensemble machine learning model that combines the predictions from multiple other models. It is a technique that may be used to improve model performance, ideally achieving better performance than any single model used in the ensemble. This balances out the individual weaknesses of the considered classifiers.
@@ -111,7 +88,7 @@ The best performing model using HyperDrive had Parameter Values as '--C', '0.001
 
 **Run Details**
 
-![](https://github.com/ObinnaIheanachor/Capstone-Project-Udacity-Machine-Learning-Engineer/blob/master/images/hyperdrive%20run%20completed.PNG)
+
 
 ![](https://github.com/Kuralay92/CapstoneUdacity/blob/94a27f2fa57df0371143ee23de5577ec8b99b16f/screenshot/Result.png)
 
@@ -139,7 +116,7 @@ The AutoML model outperforms the HyperDrive model so it will be deployed as a we
 **Enable Logging**
 
 Application Insights is a very useful tool to detect anomalies, and visualize performance. It can be enabled before or after a deployment. To enable Application Insights after a model is deployed, you can use the python SDK.
-I enabled logging by running the [logs.py](https://github.com/ObinnaIheanachor/Capstone-Project-Udacity-Machine-Learning-Engineer/blob/master/logs.py) script.
+
 
 **Running logs.py**
 
