@@ -10,14 +10,12 @@ The best models from the two experiments were compared based on the primary metr
 ![](https://github.com/ObinnaIheanachor/Capstone-Project-Udacity-Machine-Learning-Engineer/blob/master/images/capstone-diagram.png)
 
 ## Dataset
-
-I made use of [IBM HR Analytics Employee Attrition & Performance Dataset](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset).
-Employee Attrition affects every organization. The IBM HR Attrition Case Study is aimed at determining factors that lead to employee attrition and predict those at risk of leaving the company.
-
-The Dataset consists of 35 columns, which will help us predict employee attrition. More information about the dataset can be found [here](https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset)
+------commnet for mentor sorry this is from another program
+This is the classic marketing bank dataset uploaded originally in the UCI Machine Learning Repository. The dataset gives you information about a marketing campaign of a financial institution in which you will have to analyze in order to find ways to look for future strategies in order to improve future marketing campaigns for the bank.
+https://www.kaggle.com/datasets/janiobachmann/bank-marketing-dataset
 
 ### Task
-This is a binary classification problem, where the outcome 'Attrition' will either be 'true' or 'false'. In this experiment, we will use `Hyperdrive` and `AutoML' to train models on the dataset based on the `AUC Weighted` metric. We will then deploy the model with the best performance and interact with the deployed model.
+This is a binary classification problem, where the outcome 'Y' will either be 'yes' or 'no'. In this experiment, we will use `Hyperdrive` and `AutoML' to train models on the dataset based on the `AUC Weighted` metric. We will then deploy the model with the best performance and interact with the deployed model.
 
 ### Access
 The data is hosted [here](https://github.com/ObinnaIheanachor/Capstone-Project-Udacity-Machine-Learning-Engineer/blob/master/data/attrition-dataset.csv) in this repository. 
