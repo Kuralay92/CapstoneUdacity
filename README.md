@@ -153,6 +153,6 @@ I enabled logging by running the [logs.py](https://github.com/ObinnaIheanachor/C
 
 ## Screen Recording
 
-An overview of this project can be found [here](https://youtu.be/JC7_Anw-Fa8)
+An overview of this project can be found [here](https://www.youtube.com/watch?v=Y377_pp3kNw)
 
 
