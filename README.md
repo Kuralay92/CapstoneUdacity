@@ -115,7 +115,7 @@ The AutoML model outperforms the HyperDrive model so it will be deployed as a we
 
 Application Insights is a very useful tool to detect anomalies, and visualize performance. It can be enabled before or after a deployment. To enable Application Insights after a model is deployed, you can use the python SDK.
 
-![]https://github.com/Kuralay92/CapstoneUdacity/blob/a9a9a22eba3719b77d1add8c6ee06aeef19e271d/screenshot/appenabled.png
+![](https://github.com/Kuralay92/CapstoneUdacity/blob/a9a9a22eba3719b77d1add8c6ee06aeef19e271d/screenshot/appenabled.png)
 **Application Insights Enabled**
 
 ![](https://github.com/Kuralay92/CapstoneUdacity/blob/d07134cab652c78f7ad6be88212d0a28510f4284/screenshot/app-enabled.png)
