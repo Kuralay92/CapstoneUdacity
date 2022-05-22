@@ -2,6 +2,7 @@
 This project I have the opportunity to use the knowledge obtained from this Nanodegree to solve an interesting problem. In this project, I will create two models: one using Automated ML (denoted as AutoML from now on) and one customized model whose hyperparameters are tuned using HyperDrive. I will then compare the performance of both the models and deploy the best performing model.
 
 In this  will demonstrate my ability to use an external dataset in your workspace, train a model using the different tools available in the AzureML framework as well as your ability to deploy the model as a web service.
+<img width="514" alt="image" src="https://user-images.githubusercontent.com/49708694/169706551-79b726fd-21e5-489e-b625-d0aa6fc6c732.png">
 
 ## Dataset
 
@@ -20,7 +21,7 @@ AutoML or Automated ML is the process of automating the task of machine learning
 
 For this experiment in Azure ML Studio we train a model using the on the bank marketing dataset with Automated ML, we create a new compute cluster, and run the AutoML experiment.
 ![]https://github.com/Kuralay92/CapstoneUdacity/blob/4bbe8b552bbb7981fa9c26da6cf0eb47c5521b1d/screenshot/Screenshot%202022-05-22%20214450.png
-
+And above you can see all screenshots how Auto Ml model is created and successfully deployed 
 ### Results
 The best performing model is the `VotingEnsemble` with an AUC_weighted value of **0.89**. A voting ensemble (or a “majority voting ensemble“) is an ensemble machine learning model that combines the predictions from multiple other models. It is a technique that may be used to improve model performance, ideally achieving better performance than any single model used in the ensemble. This balances out the individual weaknesses of the considered classifiers.
 
@@ -42,9 +43,7 @@ The best performing model is the `VotingEnsemble` with an AUC_weighted value of 
 
 Project's dataset contains marketing data about individuals. The data is related with direct marketing campaigns (phone calls) of a Portuguese banking institution. The classification goal is to predict whether the client will subscribe a bank term deposit (column y).
 
-The best performing model was the **HyperDrive model** with ID 
-
-_fda34223-a94c-456b-8bf7-52e84aa1d17e_14. It derived from a Scikit-learn pipeline and had an accuracy of **0.91760**. In contrast, for the **AutoML model** with ID AutoML_ee4a685e-34f2-4031-a4f9-fe96ff33836c_13, the accuracy was **0.91618** and the algorithm used was VotingEnsemble.
+The best performing model was the **HyperDrive model** with  Run Id:  HD_fd4947e4-5b87-414b-a592-6c5d6cfe4496_10. It derived from a Scikit-learn pipeline and had an accuracy of **0.91**. In contrast, for the **AutoML model** with IAutoML_e8ea9e9e-8768-44c2-bcf1-8165282894b7_36, the accuracy was **0.89** and the algorithm used was VotingEnsemble.
 
 ## Hyperparameter Tuning
 
@@ -88,8 +87,6 @@ The best performing model using HyperDrive had Parameter Values as '--C', '0.001
 
 **Run Details**
 
-
-
 ![](https://github.com/Kuralay92/CapstoneUdacity/blob/94a27f2fa57df0371143ee23de5577ec8b99b16f/screenshot/Result.png)
 
 ### Improve HyperDrive Results
@@ -117,11 +114,7 @@ The AutoML model outperforms the HyperDrive model so it will be deployed as a we
 
 Application Insights is a very useful tool to detect anomalies, and visualize performance. It can be enabled before or after a deployment. To enable Application Insights after a model is deployed, you can use the python SDK.
 
-
-**Running logs.py**
-
-![](https://github.com/ObinnaIheanachor/Capstone-Project-Udacity-Machine-Learning-Engineer/blob/master/images/automl%20enable%20logging.PNG)
-
+![]https://github.com/Kuralay92/CapstoneUdacity/blob/a9a9a22eba3719b77d1add8c6ee06aeef19e271d/screenshot/appenabled.png
 **Application Insights Enabled**
 
 ![](https://github.com/Kuralay92/CapstoneUdacity/blob/d07134cab652c78f7ad6be88212d0a28510f4284/screenshot/app-enabled.png)
