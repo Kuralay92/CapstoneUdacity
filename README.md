@@ -118,7 +118,7 @@ Application Insights is a very useful tool to detect anomalies, and visualize pe
 ![](https://github.com/Kuralay92/CapstoneUdacity/blob/a9a9a22eba3719b77d1add8c6ee06aeef19e271d/screenshot/appenabled.png)
 **Application Insights Enabled**
 
-![](https://github.com/Kuralay92/CapstoneUdacity/blob/d07134cab652c78f7ad6be88212d0a28510f4284/screenshot/app-enabled.png)
+![](https://github.com/Kuralay92/CapstoneUdacity/blob/477c098728f03ad3800b08576bd2405e0e258dea/screenshot/appenabler.png)
 
 ## Screen Recording
 
