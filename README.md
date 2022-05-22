@@ -13,7 +13,7 @@ https://www.kaggle.com/datasets/janiobachmann/bank-marketing-dataset
 This is a binary classification problem, where the outcome 'Y' will either be 'yes' or 'no'. In this experiment, we will use `Hyperdrive` and `AutoML' to train models on the dataset based on the `AUC Weighted` metric. We will then deploy the model with the best performance and interact with the deployed model.
 
 ### Access
-The data is hosted in this repository.[here]https://github.com/Kuralay92/CapstoneUdacity/blob/607123a40a3d05d1c2043edf5fb9bcb18dd46f86/bankmarketing_train%20(2).csv 
+The data is hosted in this repository.[here](https://github.com/Kuralay92/CapstoneUdacity/blob/607123a40a3d05d1c2043edf5fb9bcb18dd46f86/bankmarketing_train%20(2).csv)
 I will use the `Tabular Dataset Factory's Dataset.Tabular.from_delimited_files()` operation to get the data from the url and save it to the datastore by using dataset.register().
 
 ## Automated ML
