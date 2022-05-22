@@ -13,14 +13,15 @@ https://www.kaggle.com/datasets/janiobachmann/bank-marketing-dataset
 This is a binary classification problem, where the outcome 'Y' will either be 'yes' or 'no'. In this experiment, we will use `Hyperdrive` and `AutoML' to train models on the dataset based on the `AUC Weighted` metric. We will then deploy the model with the best performance and interact with the deployed model.
 
 ### Access
-The data is hosted in this repository.https://github.com/Kuralay92/CapstoneUdacity/blob/607123a40a3d05d1c2043edf5fb9bcb18dd46f86/bankmarketing_train%20(2).csv 
+The data is hosted in this repository.[here]https://github.com/Kuralay92/CapstoneUdacity/blob/607123a40a3d05d1c2043edf5fb9bcb18dd46f86/bankmarketing_train%20(2).csv 
 I will use the `Tabular Dataset Factory's Dataset.Tabular.from_delimited_files()` operation to get the data from the url and save it to the datastore by using dataset.register().
 
 ## Automated ML
 AutoML or Automated ML is the process of automating the task of machine learning model development. Using this feature, you can predict the best ML model, and its hyperparameters suited for your problem statement.
 
 For this experiment in Azure ML Studio we train a model using the on the bank marketing dataset with Automated ML, we create a new compute cluster, and run the AutoML experiment.
-![]https://github.com/Kuralay92/CapstoneUdacity/blob/4bbe8b552bbb7981fa9c26da6cf0eb47c5521b1d/screenshot/Screenshot%202022-05-22%20214450.png
+
+![](https://github.com/Kuralay92/CapstoneUdacity/blob/4bbe8b552bbb7981fa9c26da6cf0eb47c5521b1d/screenshot/Screenshot%202022-05-22%20214450.png)
 And above you can see all screenshots how Auto Ml model is created and successfully deployed 
 ### Results
 The best performing model is the `VotingEnsemble` with an AUC_weighted value of **0.89**. A voting ensemble (or a “majority voting ensemble“) is an ensemble machine learning model that combines the predictions from multiple other models. It is a technique that may be used to improve model performance, ideally achieving better performance than any single model used in the ensemble. This balances out the individual weaknesses of the considered classifiers.
