@@ -19,4 +19,5 @@ def run(data):
         result = model.predict(data)
         return result.tolist()
     except Exception as err:
-        return strn+"run method error: "+str(err)
+        error = str(err)
+        return error
